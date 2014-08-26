@@ -4,7 +4,7 @@
 ##	going to hardcode the dotfile for safety instead of 
 ##	looping over everything in directory
 
-DF_DIR="$HOME/.df/"
+DF_DIR="$HOME/df/"
 files='.Xauthority
 	.Xresources
 	.bashrc
