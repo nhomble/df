@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+
+# 	symlink all of the rc files
+##	going to hardcode the dotfile for safety instead of 
+##	looping over everything in directory
+
+DF_DIR="$HOME/.df/"
+files='.Xauthority
+	.Xresources
+	.bashrc
+	.gist
+	.vimrc
+	.Xdefaults
+	.bash_profile'
+
+cd "$DF_DIR"
+for file in $files; do
+	# sanity check
+	if [ ! -e "$file" ]; then
+		printf "$file does not exist!\n"
+		exit
+	fi
+	# symlink? then update
+	if [ -h "$HOME/$file" ]; then
+		printf "$HOME/$file symlink already exists, updating\n"
+		rm "$HOME/$file"
+	fi
+	# already in home dir?
+	if [ -e "$HOME/$file" ]; then
+		printf "$HOME/$file file exists, replace (y/n)\n"
+		isValid=false
+		while [ $isValid = false ]; do
+			read RESPONSE
+			case $RESPONSE in
+				y)
+					isValid=true
+					rm "$HOME/$file"
+					;;
+				n)
+					isValid=true
+					continue
+					;;
+				*)
+					printf "%s is not a valid response\n" $RESPONSE
+					continue
+					;;
+			esac
+		done
+		if [ "n" == "$RESPONSE" ]; then
+			continue
+		fi
+	fi
+	ln -s "$DF_DIR$file" "$HOME/$file"
+done
