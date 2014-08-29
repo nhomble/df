@@ -16,17 +16,17 @@ files='.Xauthority
 cd "$DF_DIR"
 for file in $files; do
 	# sanity check
-	if [ ! -e "$file" ]; then
+	if [[ ! -e "$file" ]]; then
 		printf "$file does not exist!\n"
 		exit
 	fi
 	# symlink? then update
-	if [ -h "$HOME/$file" ]; then
+	if [[ -h "$HOME/$file" ]]; then
 		printf "$HOME/$file symlink already exists, updating\n"
 		rm "$HOME/$file"
 	fi
 	# already in home dir?
-	if [ -e "$HOME/$file" ]; then
+	if [[ -e "$HOME/$file" ]]; then
 		printf "$HOME/$file file exists, replace (y/n)\n"
 		isValid=false
 		while [ $isValid = false ]; do
@@ -46,7 +46,7 @@ for file in $files; do
 					;;
 			esac
 		done
-		if [ "n" == "$RESPONSE" ]; then
+		if [[ "n" == "$RESPONSE" ]]; then
 			continue
 		fi
 	fi
