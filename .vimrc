@@ -1,5 +1,9 @@
+execute pathogen#infect()
+
 syntax on
-map ; :
+noremap ; :
+noremap m :make<CR>
+noremap f :echo @%<CR>
 :set number
 colorscheme pablo
 vmap > >gv
