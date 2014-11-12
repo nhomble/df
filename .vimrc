@@ -1,4 +1,5 @@
-execute pathogen#infect()
+" execute pathogen#infect()
+" autocmd vimenter * NERDTree
 
 syntax on
 noremap ; :
