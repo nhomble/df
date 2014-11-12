@@ -8,6 +8,7 @@
 
 alias ls='ls --color=auto'
 alias sl='ls'
+alias vmi='vim'
 alias reboot='sudo reboot'
 alias poweroff='sudo poweroff'
 alias shutdown='sudo poweroff'
