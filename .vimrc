@@ -1,6 +1,3 @@
-" execute pathogen#infect()
-" autocmd vimenter * NERDTree
-
 syntax on
 noremap ; :
 noremap m :make<CR>

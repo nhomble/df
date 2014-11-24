@@ -22,6 +22,8 @@ alias google='google-chrome-stable'
 alias ohmm='~/code/ohmm/ohmm'
 alias gsearch='~/code/gcmd/gsearch'
 
+export TERM="xterm-256color"
+
 PS1="\[$(tput bold)\]\[$(tput setaf 2)\]\W $\[$(tput sgr0)\] "
 
 isNOTE=false
