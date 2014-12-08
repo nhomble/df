@@ -11,7 +11,8 @@ files='.Xauthority
 	.gist
 	.vimrc
 	.Xdefaults
-	.bash_profile'
+	.bash_profile
+	.pinerc'
 
 cd "$DF_DIR"
 for file in $files; do

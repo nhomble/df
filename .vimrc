@@ -11,5 +11,11 @@ set ruler
 set autoindent
 set softtabstop=4 " backspace key
 
-autocmd FileType make setlocal tabstop=8
-autocmd FileType make setlocal noexpandtab
+if has("autocmd")
+	autocmd FileType make setlocal tabstop=8
+	autocmd FileType make setlocal noexpandtab
+	if v:version > 701
+		autocmd Syntax * call matchadd('Todo', '\W\zs\(BUG\|HACK\|DONE\|NOTE\)')
+	endif
+endif
+		
