@@ -1,0 +1,25 @@
+out_to_console yes
+out_to_x no
+
+
+own_window_type override
+own_window_colour 000000
+own_window_transparent no
+double_buffer yes
+cpu_avg_samples 2
+net_avg_samples 2
+use_xft no
+xftfont Terminus:size=8
+update_interval 0.01
+minimum_size 1280 10
+maximum_width 1280
+border_width 1
+draw_outline no
+default_color white
+alignment bottom_left
+use_spacer right
+no_buffers yes
+uppercase no
+
+TEXT
+Network:${color blue} ${wireless_essid wlp2s0} ${color #0077ff}| Battery: ${battery_time BAT0} ${color #0077ff}| Volume:${color white} ${exec amixer get Master | egrep -o "[0-9]+%" | head -1 | egrep -o "[0-9]*"}%

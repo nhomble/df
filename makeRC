@@ -12,14 +12,15 @@ files='.Xauthority
 	.vimrc
 	.Xdefaults
 	.bash_profile
-	.pinerc'
+	.pinerc
+	.conkyrc'
 
 cd "$DF_DIR"
 for file in $files; do
 	# sanity check
 	if [[ ! -e "$file" ]]; then
 		printf "$file does not exist!\n"
-		exit
+		continue
 	fi
 	# symlink? then update
 	if [[ -h "$HOME/$file" ]]; then

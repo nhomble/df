@@ -8,6 +8,7 @@
 
 alias ls='ls --color=auto'
 alias sl='ls'
+alias l='ls'
 alias vmi='vim'
 alias reboot='sudo reboot'
 alias poweroff='sudo poweroff'
@@ -17,6 +18,7 @@ alias serversftp='sftp 129.2.220.246'
 alias umd='ssh -X nhomble@linux.grace.umd.edu'
 alias chromium='google-chrome-stable'
 alias google='google-chrome-stable'
+alias feh='feh --scale'
 
 # I don't really want to add my projets to my path so...
 alias ohmm='~/code/ohmm/ohmm'
