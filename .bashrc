@@ -19,6 +19,7 @@ alias umd='ssh -X nhomble@linux.grace.umd.edu'
 alias chromium='google-chrome-stable'
 alias google='google-chrome-stable'
 alias feh='feh --scale'
+alias cmsc435='ssh -X cmsc435@vernacular.cs.umd.edu'
 
 # I don't really want to add my projets to my path so...
 alias ohmm='~/code/ohmm/ohmm'
@@ -26,7 +27,7 @@ alias gsearch='~/code/gcmd/gsearch'
 
 export TERM="xterm-256color"
 
-PS1="\[$(tput bold)\]\[$(tput setaf 2)\]\W $\[$(tput sgr0)\] "
+PS1="\[$(tput bold)\]\[$(tput setaf 2)\]\h \W $\[$(tput sgr0)\] "
 
 isNOTE=false
 temp=$(ps aux | grep NOTES | grep -v grep | awk '{print $2}')
