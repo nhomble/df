@@ -48,6 +48,7 @@ function cd(){
 
 PATH=$PATH:/home/nicolas/bin
 EDITOR="vim"
+SVN_EDITOR="vim"
 INIT="$(tty | grep tty1)"
 if [ ! -z $INIT ] && [ -z "$DISPLAY" ]; then
 	startx;
