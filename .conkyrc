@@ -22,4 +22,4 @@ no_buffers yes
 uppercase no
 
 TEXT
-wifi:${color blue} ${wireless_essid wlp2s0b1} ${color #0077ff}| Pow: ${battery_time BAT0} ${color #0077ff}| Vol:${color white} ${exec amixer get Master | egrep -o "[0-9]+%" | head -1 | egrep -o "[0-9]*"}%
+wifi:${color blue} ${wireless_essid wlp2s0b1} ${color #0077ff}| Vol:${color white} ${exec amixer get Master | egrep -o "[0-9]+%" | head -1 | egrep -o "[0-9]*"}%
