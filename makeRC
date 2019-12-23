@@ -7,7 +7,6 @@ DF_DIR="$(pwd)/"
 files='.Xauthority
 	.Xresources
 	.bashrc
-	.gist
 	.vimrc
 	.Xdefaults
 	.bash_profile
