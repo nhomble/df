@@ -12,8 +12,7 @@ files='.Xauthority
 	.Xdefaults
 	.bash_profile
 	.pinerc
-	.conkyrc
-	.addressbook'
+	.conkyrc'
 
 cd "$DF_DIR"
 for file in $files; do
