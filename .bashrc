@@ -2,7 +2,6 @@
 # ~/.bashrc
 #
 
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -15,36 +14,28 @@ alias vim='vim'
 alias reboot='sudo reboot'
 alias poweroff='sudo poweroff'
 alias shutdown='sudo poweroff'
-alias server='ssh 129.2.220.246'
-alias serversftp='sftp 129.2.220.246'
-alias umd='ssh -X nhomble@linux.grace.umd.edu'
 alias chromium='google-chrome-stable'
 alias google='google-chrome-stable'
 alias feh='feh --scale'
-alias cmsc435='ssh -X cmsc435@vernacular.cs.umd.edu'
-
-# I don't really want to add my projets to my path so...
-alias ohmm='~/code/ohmm/ohmm'
-alias gsearch='~/code/gcmd/gsearch'
-
-export TERM="xterm-256color"
+alias term='xterm'
 
 PS1="\[$(tput bold)\]\[$(tput setaf 2)\]\h \W $\[$(tput sgr0)\] "
 
+NOTE_DIR=~/.notepad_dir
 isNOTE=false
 temp=$(ps aux | grep NOTES | grep -v grep | awk '{print $2}')
-if [ "$PPID" = "$temp" ]; then
-	if [ ! -e /tmp/.notepad_dir ]; then
-		echo "/home/nicolas/" > /tmp/.notepad_dir
+if [[ "$PPID" = "$temp" ]]; then
+	if [[ ! -e "$NOTE_DIR" ]]; then
+		echo $HOME > $NOTE_DIR
 	fi
-	cd "$(cat /tmp/.notepad_dir)"
+	cd "$(cat $NOTE_DIR)"
 	isNOTE=true;
 fi
 
 function cd(){
 	builtin cd "$@";
-	if [ $isNOTE = true ]; then
-		pwd > /tmp/.notepad_dir
+	if [[ $isNOTE = true ]]; then
+		pwd > $NOTE_DIR
 	fi	
 	return
 }
@@ -52,7 +43,8 @@ function cd(){
 PATH=$PATH:/home/nicolas/bin
 EDITOR="vim"
 SVN_EDITOR="vim"
-INIT="$(tty | grep tty1)"
-if [ ! -z $INIT ] && [ -z "$DISPLAY" ]; then
-	startx;
+if [[ -n "$XTERM_VERSION" ]]; then
+    command -v transset-df &> /dev/null && transset-df --id "$WINDOWID" &> /dev/null
 fi
+
+command -v ~/bin/boot/start &> /dev/null && ~/bin/boot/start
