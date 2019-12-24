@@ -20,7 +20,7 @@ if has("autocmd")
 	autocmd FileType make setlocal tabstop=4
 	autocmd FileType make setlocal noexpandtab
 	if v:version > 701
-		autocmd Syntax * call matchadd('Todo', '\W\zs\(BUG\|HACK\|END\|DONE\|NOTE\)')
+		autocmd Syntax * call matchadd('Todo', '\W\zs\(BUG\|HACK\)')
 	endif
 endif
 		
