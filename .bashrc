@@ -39,10 +39,10 @@ function cd(){
 	fi	
 	return
 }
-
-PATH=$PATH:/home/nicolas/bin
+PATH=$PATH:/home/$(whoami)/bin
 EDITOR="vim"
 SVN_EDITOR="vim"
+
 if [[ -n "$XTERM_VERSION" ]]; then
     command -v transset-df &> /dev/null && transset-df --id "$WINDOWID" &> /dev/null
 fi
