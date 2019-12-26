@@ -4,13 +4,24 @@
 ##	going to hardcode the dotfile for safety instead of 
 ##	looping over everything in directory
 DF_DIR="$(pwd)/"
+
 files='.Xauthority
 	.Xresources
 	.bashrc
 	.vimrc
 	.Xdefaults
 	.bash_profile
-	.pinerc'
+	.pinerc
+    .config/nvim/init.vim'
+
+all_dirs='~/.config/nvim'
+
+for d in $all_dirs; do
+    if [[ ! -e $d ]]; then
+        printf "Going to create directory tree $d"
+        mkdir -p $d
+    fi
+done
 
 cd "$DF_DIR"
 for file in $files; do
