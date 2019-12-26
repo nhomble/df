@@ -8,9 +8,6 @@
 alias ls='ls --color=auto'
 alias sl='ls'
 alias l='ls'
-alias vmi='vim'
-alias vi='vim'
-alias vim='vim'
 alias reboot='sudo reboot'
 alias poweroff='sudo poweroff'
 alias shutdown='sudo poweroff'
@@ -18,6 +15,13 @@ alias chromium='google-chrome-stable'
 alias google='google-chrome-stable'
 alias feh='feh --scale'
 alias term='xterm'
+
+export EDITOR="nvim"
+export SVN_EDITOR="$EDITOR"
+alias vim="$EDITOR"
+alias vmi="$EDITOR"
+alias vi="$EDITOR"
+alias vim="$EDITOR"
 
 PS1="\[$(tput bold)\]\[$(tput setaf 2)\]\h \W $\[$(tput sgr0)\] "
 
@@ -39,9 +43,7 @@ function cd(){
 	fi	
 	return
 }
-PATH=$PATH:/home/$(whoami)/bin
-EDITOR="vim"
-SVN_EDITOR="vim"
+PATH=$PATH:$HOME/bin
 
 if [[ -n "$XTERM_VERSION" ]]; then
     command -v transset-df &> /dev/null && transset-df --id "$WINDOWID" &> /dev/null
