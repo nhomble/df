@@ -14,7 +14,8 @@ files='.Xauthority
 	.pinerc
     .config/nvim/init.vim'
 
-all_dirs='~/.config/nvim'
+all_dirs='~/dev
+    ~/.config/nvim'
 
 for d in $all_dirs; do
     if [[ ! -e $d ]]; then
