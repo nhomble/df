@@ -8,6 +8,7 @@
 alias ls='ls --color=auto'
 alias sl='ls'
 alias l='ls'
+alias cd-='cd -'
 alias reboot='sudo reboot'
 alias poweroff='sudo poweroff'
 alias shutdown='sudo poweroff'
@@ -48,5 +49,6 @@ PATH=$PATH:$HOME/bin
 if [[ -n "$XTERM_VERSION" ]]; then
     command -v transset-df &> /dev/null && transset-df --id "$WINDOWID" &> /dev/null
 fi
+
 
 command -v ~/bin/boot/start &> /dev/null && ~/bin/boot/start
