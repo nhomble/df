@@ -16,6 +16,7 @@ alias chromium='google-chrome-stable'
 alias google='google-chrome-stable'
 alias feh='feh --scale'
 alias term='xterm'
+alias dev='cd ~/dev'
 
 export EDITOR="nvim"
 export SVN_EDITOR="$EDITOR"
@@ -44,6 +45,8 @@ function cd(){
 	fi	
 	return
 }
+
+export GOPATH=$HOME/dev/go
 PATH=$PATH:$HOME/bin
 
 if [[ -n "$XTERM_VERSION" ]]; then
