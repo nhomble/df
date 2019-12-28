@@ -11,12 +11,16 @@ noremap f :echo @%<CR>
 colorscheme pablo
 vmap > >gv
 vmap < <gv
+
 set ruler
 set autoindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
 set autowrite
+set path+=**
+set wildmenu
+
 filetype plugin on
 
 try
