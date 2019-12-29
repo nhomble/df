@@ -46,6 +46,7 @@ function cd(){
 }
 
 export GOPATH=$HOME/dev/go
+export GOBIN=$HOME/bin
 PATH=$PATH:$HOME/bin
 
 if [[ -n "$XTERM_VERSION" ]]; then
