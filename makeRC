@@ -61,5 +61,6 @@ for file in $files; do
 			continue
 		fi
 	fi
+    mkdir -p $(dirname "$HOME/$file")
 	ln -s "$DF_DIR$file" "$HOME/$file"
 done
