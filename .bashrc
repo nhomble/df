@@ -55,3 +55,11 @@ fi
 
 
 command -v ~/bin/boot/start &> /dev/null && ~/bin/boot/start
+
+EXTENSIONS=(
+)
+for ext in "${EXTENSIONS[@]}"; do 
+    if [[ -e $ext ]]; then
+        source "$ext"
+    fi
+done
