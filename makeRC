@@ -5,14 +5,16 @@
 ##	looping over everything in directory
 DF_DIR="$(pwd)/"
 
-files='.Xauthority
+files=(
+    .Xauthority
 	.Xresources
 	.bashrc
 	.vimrc
 	.Xdefaults
 	.bash_profile
 	.pinerc
-    .config/nvim/init.vim'
+    .config/nvim/init.vim
+)
 
 all_dirs='~/dev
     ~/.config/nvim'
@@ -30,7 +32,7 @@ if [[ ! -e ~/.local/share/nvim/site/autoload/plug.vim ]]; then
 fi
 
 cd "$DF_DIR"
-for file in $files; do
+for file in ${files[@]}; do
 	# sanity check
 	if [[ ! -e "$file" ]]; then
 		printf "$file does not exist!\n"
