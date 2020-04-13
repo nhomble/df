@@ -57,6 +57,7 @@ fi
 command -v ~/bin/boot/start &> /dev/null && ~/bin/boot/start
 
 EXTENSIONS=(
+    ~/.bash_java_extension
 )
 for ext in "${EXTENSIONS[@]}"; do 
     if [[ -e $ext ]]; then

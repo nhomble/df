@@ -14,6 +14,7 @@ files=(
 	.bash_profile
 	.pinerc
     .config/nvim/init.vim
+    .bash_java_extension
 )
 
 all_dirs='~/dev
