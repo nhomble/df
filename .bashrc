@@ -5,6 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+alias k='kubectl'
+alias k8s='kubectl'
 alias ls='ls --color=auto'
 alias sl='ls'
 alias l='ls'
