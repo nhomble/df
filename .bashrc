@@ -59,10 +59,10 @@ fi
 command -v ~/bin/boot/start &> /dev/null && ~/bin/boot/start
 
 EXTENSIONS=(
+    ~/.bash_k8s_extension
 )
 for ext in "${EXTENSIONS[@]}"; do 
     if [[ -e $ext ]]; then
         source "$ext"
     fi
 done
-export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0

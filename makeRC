@@ -13,7 +13,8 @@ files=(
 	.Xdefaults
 	.bash_profile
 	.pinerc
-    .config/nvim/init.vim
+  .config/nvim/init.vim
+  .bash_k8s_extension
 )
 
 all_dirs='~/dev
