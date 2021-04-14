@@ -1,4 +1,7 @@
 #!/usr/bin/env sh
+export LIBGL=ALWAYS_INDIRECT=1
+
+ .~/.config/df/kube.sh
 
 alias term='st'
 
