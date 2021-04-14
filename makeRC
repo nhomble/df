@@ -6,7 +6,7 @@
 DF_DIR="$(pwd)/"
 
 files=(
-    .Xauthority
+  .Xauthority
 	.Xresources
 	.bashrc
 	.vimrc
@@ -15,6 +15,7 @@ files=(
 	.pinerc
   .config/nvim/init.vim
   .bash_k8s_extension
+  .inputrc
 )
 
 all_dirs='~/dev
