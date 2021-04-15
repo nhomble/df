@@ -16,6 +16,7 @@ files=(
   .config/nvim/init.vim
   .bash_k8s_extension
   .inputrc
+  .dwmrc
 )
 
 all_dirs='~/dev
