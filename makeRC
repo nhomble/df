@@ -17,6 +17,7 @@ files=(
   .zshrc
   .hushlogin
   .inputrc
+  .dwmrc
 )
 
 all_dirs=(
