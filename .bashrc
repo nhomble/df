@@ -19,7 +19,7 @@ alias feh='feh --scale'
 alias term='st'
 alias dev='cd ~/dev'
 
-export EDITOR="nvim"
+export EDITOR="vim"
 export SVN_EDITOR="$EDITOR"
 alias vim="$EDITOR"
 alias vmi="$EDITOR"
