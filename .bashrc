@@ -66,3 +66,5 @@ for ext in "${EXTENSIONS[@]}"; do
         source "$ext"
     fi
 done
+
+complete -C /usr/bin/terraform terraform
