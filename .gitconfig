@@ -1,0 +1,5 @@
+[user]
+	email = nhomble@terpmail.umd.edu
+	name = nhomble
+[push]
+	default = current

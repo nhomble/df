@@ -17,6 +17,7 @@ files=(
   .bash_k8s_extension
   .inputrc
   .dwmrc
+  .gitconfig
 )
 
 all_dirs='~/dev
