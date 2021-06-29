@@ -18,6 +18,7 @@ files=(
   .hushlogin
   .inputrc
   .dwmrc
+  .gitconfig
 )
 
 all_dirs=(
