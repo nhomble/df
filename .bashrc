@@ -24,6 +24,10 @@ alias vmi="$EDITOR"
 alias vi="$EDITOR"
 alias vim="$EDITOR"
 
+function godoc(){
+    go doc $@
+}
+
 PS1="\[$(tput bold)\]\[$(tput setaf 2)\]\h \W $\[$(tput sgr0)\] "
 
 NOTE_DIR=~/.notepad_dir
