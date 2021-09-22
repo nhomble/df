@@ -16,10 +16,12 @@ files=(
     .config/nvim/init.vim
 )
 
-all_dirs='~/dev
-    ~/.config/nvim'
+all_dirs=(
+  ~/dev
+  ~/.config/nvim
+)
 
-for d in $all_dirs; do
+for d in ${all_dirs[@]}; do
     if [[ ! -e $d ]]; then
         printf "Going to create directory tree $d"
         mkdir -p $d
