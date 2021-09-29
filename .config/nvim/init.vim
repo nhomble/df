@@ -1,6 +1,8 @@
 syntax on
 noremap ; :
-autocmd FileType c      noremap <leader>m :make<CR>
+noremap m :make<CR>
+
+autocmd FileType go     noremap <leader>m :!go fmt; go build<CR>
 
 noremap f :echo @%<CR>
 :set number
@@ -24,6 +26,8 @@ try
 
         Plug 'tpope/vim-sensible'
         Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
+        Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+        Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
     call plug#end()
 catch
