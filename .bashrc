@@ -18,6 +18,7 @@ alias shutdown='sudo poweroff'
 alias feh='feh --scale'
 alias term='st'
 alias dev='cd ~/dev'
+alias cdtmp='cd $(mktemp -d)'
 
 export EDITOR="vim"
 export SVN_EDITOR="$EDITOR"
