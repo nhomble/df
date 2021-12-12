@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+alias term='st'
+
 NOTE_DIR=~/.notepad_dir
 isNOTE=false
 temp=$(ps aux | grep NOTES | grep -v grep | awk '{print $2}')
