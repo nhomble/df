@@ -13,6 +13,7 @@ files=(
 	.bash_profile
 	.pinerc
   .config/nvim/init.vim
+  .zshrc
 )
 
 all_dirs=(
@@ -26,6 +27,10 @@ for d in ${all_dirs[@]}; do
         mkdir -p $d
     fi
 done
+
+# shouldn't matter, it's internal to df
+rm -if "$HOME/.config/df"
+ln -s "${DF_DIR}config" "$HOME/.config/df"
 
 if [[ ! -e ~/.local/share/nvim/site/autoload/plug.vim ]]; then
     curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \

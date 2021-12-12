@@ -5,20 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias k='kubectl'
-alias k8s='kubectl'
-alias ls='ls --color=auto'
-alias sl='ls'
-alias l='ls'
-alias cd-='cd -'
-alias cd..='cd ..'
-alias reboot='sudo reboot'
-alias poweroff='sudo poweroff'
-alias shutdown='sudo poweroff'
-alias feh='feh --scale'
-alias term='st'
-alias dev='cd ~/dev'
-alias cdtmp='cd $(mktemp -d)'
+source ~/.config/df/aliases.sh
 
 export EDITOR="vim"
 export SVN_EDITOR="$EDITOR"
