@@ -6,14 +6,13 @@
 DF_DIR="$(pwd)/"
 
 files=(
-    .Xauthority
 	.Xresources
 	.bashrc
 	.vimrc
 	.Xdefaults
 	.bash_profile
 	.pinerc
-    .config/nvim/init.vim
+  .config/nvim/init.vim
 )
 
 all_dirs=(
