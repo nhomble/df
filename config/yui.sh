@@ -3,6 +3,7 @@ export LIBGL=ALWAYS_INDIRECT=1
 
 . ~/.config/df/kube.sh
 . ~/.config/df/terraform.sh
+. ~/.config/df/cargo.sh
 
 alias term='st'
 
