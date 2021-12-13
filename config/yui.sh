@@ -1,7 +1,8 @@
 #!/usr/bin/env sh
 export LIBGL=ALWAYS_INDIRECT=1
 
- .~/.config/df/kube.sh
+. ~/.config/df/kube.sh
+. ~/.config/df/terraform.sh
 
 alias term='st'
 
