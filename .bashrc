@@ -83,3 +83,6 @@ _node_complete() {
   fi
 }
 complete -F _node_complete node node_g
+. "$HOME/.cargo/env"
+
+source ~/.cargo/env
