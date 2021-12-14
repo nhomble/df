@@ -6,6 +6,7 @@
 DF_DIR="$(pwd)/"
 
 files=(
+  .Xauthority
 	.Xresources
 	.bashrc
 	.vimrc
@@ -15,6 +16,9 @@ files=(
   .config/nvim/init.vim
   .zshrc
   .hushlogin
+  .inputrc
+  .dwmrc
+  .gitconfig
 )
 
 all_dirs=(
