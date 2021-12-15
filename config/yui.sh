@@ -6,6 +6,7 @@ export LIBGL=ALWAYS_INDIRECT=1
 . ~/.config/df/cargo.sh
 
 alias term='st'
+alias python='python3'
 
 NOTE_DIR=~/.notepad_dir
 isNOTE=false
