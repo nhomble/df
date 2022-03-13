@@ -39,3 +39,6 @@ export GOBIN=$HOME/bin
 function godoc(){
     go doc $@
 }
+
+export PATH="$HOME/.basher/bin:$PATH"   ##basher5ea843
+eval "$(basher init - bash)"             ##basher5ea843
