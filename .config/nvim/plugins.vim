@@ -12,7 +12,8 @@ call plug#begin()
   Plug 'preservim/tagbar'
   Plug 'HerringtonDarkholme/yats.vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  o
+  Plug 'tpope/vim-fugitive'
+  
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
 call plug#end()
