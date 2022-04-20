@@ -37,11 +37,6 @@ done
 rm -if "$HOME/.config/df"
 ln -s "${DF_DIR}config" "$HOME/.config/df"
 
-if [[ ! -e ~/.local/share/nvim/site/autoload/plug.vim ]]; then
-    curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-fi
-
 cd "$DF_DIR"
 for file in ${files[@]}; do
 	# sanity check
