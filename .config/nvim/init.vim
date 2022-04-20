@@ -14,9 +14,9 @@ set wildmenu            " adds menu style tab completion
 " ---------------------------------------
 " Indenting Options
 " ---------------------------------------
-set tabstop=4               " sets number of columns per tab
+set tabstop=2               " sets number of columns per tab
 set expandtab               " converts tabs to whitespace
-set shiftwidth=4            " sets width for autoindents
+set shiftwidth=2            " sets width for autoindents
 set autoindent              " indents a new line with the same as the line just
                             " typed
 filetype plugin indent on   " auto-indenting depending on file type
