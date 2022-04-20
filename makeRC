@@ -17,6 +17,7 @@ files=(
   .config/nvim/colors.vim
   .config/nvim/mappings.vim
   .config/nvim/plugins.vim
+  .config/nvim/ftplugin/typescript.vim
   .zshrc
   .hushlogin
   .inputrc
@@ -27,6 +28,7 @@ files=(
 all_dirs=(
   ~/dev
   ~/.config/nvim
+  ~/.config/nvim/ftplugin
 )
 
 for d in ${all_dirs[@]}; do

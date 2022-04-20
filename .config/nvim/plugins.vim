@@ -10,6 +10,8 @@ call plug#begin()
   Plug 'morhetz/gruvbox'
   Plug 'rust-lang/rust.vim'
   Plug 'preservim/tagbar'
+  Plug 'HerringtonDarkholme/yats.vim'
+  Plug 'neoclide/coc.nvim'
 call plug#end()
 
 " ------------------------------------
