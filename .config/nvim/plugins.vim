@@ -6,5 +6,9 @@ endif
 
 " after changing, don't forget to run :PlugInstall
 call plug#begin()
+  Plug 'vim-syntastic/syntastic'
   Plug 'morhetz/gruvbox'
+  Plug 'rust-lang/rust.vim'
 call plug#end()
+
+source $HOME/.config/nvim/syntastic.vim

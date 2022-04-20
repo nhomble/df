@@ -17,6 +17,7 @@ files=(
   .config/nvim/colors.vim
   .config/nvim/mappings.vim
   .config/nvim/plugins.vim
+  .config/nvim/syntastic.vim
   .zshrc
   .hushlogin
   .inputrc
