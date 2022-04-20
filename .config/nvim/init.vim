@@ -21,6 +21,6 @@ set autoindent              " indents a new line with the same as the line just
                             " typed
 filetype plugin indent on   " auto-indenting depending on file type
 
+source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/mappings.vim
 source $HOME/.config/nvim/colors.vim
-source $HOME/.config/nvim/plugins.vim
