@@ -19,6 +19,11 @@ call plug#begin()
 call plug#end()
 
 " ------------------------------------
+" fzf
+" ------------------------------------
+noremap f :Files<CR>
+
+" ------------------------------------
 " syntastic
 " ------------------------------------
 " recommended settings for newbies
