@@ -21,11 +21,15 @@ call plug#end()
 " ------------------------------------
 " fzf
 " ------------------------------------
-noremap f :Files<CR>
+
+" f for find, and then f for files versus g for git aware files
+noremap ff :Files<CR>
+noremap fg :GFiles<CR>
 
 " ------------------------------------
 " syntastic
 " ------------------------------------
+
 " recommended settings for newbies
 " mentioned in README.md https://github.com/vim-syntastic/syntastic
 set statusline+=%#warningmsg#
