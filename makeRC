@@ -18,6 +18,7 @@ files=(
   .config/nvim/mappings.vim
   .config/nvim/plugins.vim
   .config/nvim/syntastic.vim
+  .config/nvim/rust-lang.vim
   .zshrc
   .hushlogin
   .inputrc

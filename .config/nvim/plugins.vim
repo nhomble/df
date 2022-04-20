@@ -12,3 +12,4 @@ call plug#begin()
 call plug#end()
 
 source $HOME/.config/nvim/syntastic.vim
+source $HOME/.config/nvim/rust-lang.vim
