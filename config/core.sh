@@ -8,9 +8,9 @@ function load_current() {
   PATH=$PATH:$HOME/bin
   PATH=$PATH:~/.local/bin
 
+  . /var/tmp/df-current.sh
   . ~/.config/df/aliases.sh
   . ~/.config/df/editor.sh
-  . /var/tmp/df-current.sh
 }
 
 load_current
