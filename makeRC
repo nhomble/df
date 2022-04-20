@@ -7,12 +7,12 @@ DF_DIR="$(pwd)/"
 
 files=(
   .Xauthority
-	.Xresources
-	.bashrc
-	.vimrc
-	.Xdefaults
-	.bash_profile
-	.pinerc
+  .Xresources
+  .bashrc
+  .vimrc
+  .Xdefaults
+  .bash_profile
+  .pinerc
   .config/nvim/init.vim
   .zshrc
   .hushlogin
