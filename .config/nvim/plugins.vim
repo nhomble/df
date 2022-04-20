@@ -9,7 +9,29 @@ call plug#begin()
   Plug 'vim-syntastic/syntastic'
   Plug 'morhetz/gruvbox'
   Plug 'rust-lang/rust.vim'
+  Plug 'preservim/tagbar'
 call plug#end()
 
-source $HOME/.config/nvim/syntastic.vim
-source $HOME/.config/nvim/rust-lang.vim
+" ------------------------------------
+" syntastic
+" ------------------------------------
+" recommended settings for newbies
+" mentioned in README.md https://github.com/vim-syntastic/syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" ------------------------------------
+" rust-lang/rust
+" ------------------------------------
+
+let g:rustfmt_autosave = 1
+" ------------------------------------
+" rust-lang/rust
+" ------------------------------------
+noremap tt :TagbarToggle <CR>
