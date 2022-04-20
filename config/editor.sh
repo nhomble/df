@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-export EDITOR="vim"
+export EDITOR="${EDITOR:-vim}"
 export SVN_EDITOR="$EDITOR"
 alias vim="$EDITOR"
 alias vmi="$EDITOR"
