@@ -12,4 +12,4 @@ inoremap ii <esc>
 vmap > >gv
 vmap < <gv
 
-noremap m :make<CR>
+noremap fp :echo @%<CR>
