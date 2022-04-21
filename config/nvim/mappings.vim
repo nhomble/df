@@ -11,5 +11,3 @@ inoremap ii <esc>
 " keeps the current visual block selection active after changing indent
 vmap > >gv
 vmap < <gv
-
-noremap fp :echo @%<CR>
