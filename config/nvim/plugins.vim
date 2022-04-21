@@ -13,6 +13,7 @@ call plug#begin()
   Plug 'HerringtonDarkholme/yats.vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'tpope/vim-fugitive'
+  Plug 'vim-airline/vim-airline'
   
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
