@@ -207,3 +207,7 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+" replace ctags with coc
+noremap <C-t> <Plug>(coc-definition)
+noremap <C-]> <C-o>
