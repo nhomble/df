@@ -2,7 +2,7 @@ MKFILE_WORDS  := $(words $(MAKEFILE_LIST))
 MKFILE_PATH 	:= $(abspath $(lastword $(MAKEFILE_LIST)))
 MKFILE_DIR 	 	:= $(dir $(MKFILE_PATH))
 
-all: home/directories nvim/config nvim/config/ftplugin home/dotfiles home/dotfiles/config
+all: home/directories nvim/config nvim/config/ftplugin home/dotfiles home/dotfiles/config nvim/plugins/install
 
 home/directories:
 	mkdir -p $$HOME/dev
@@ -37,6 +37,9 @@ nvim/config/ftplugin:
 		[ -e "$$dest" ] && echo "Cleaning $$dest";    			\
 		rm -f "$$dest" && ln -s "$$f" "$$dest"; 			\
 	done
+
+nvim/plugins/install:
+	nvim +'PlugInstall' +qa
 
 clean:
 	rm -if "$$HOME/.config/df"
