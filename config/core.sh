@@ -7,7 +7,7 @@ function load_current() {
   PATH=$PATH:$HOME/bin
   PATH=$PATH:~/.local/bin
 
-  . $HOST_FILE
+  [ -f $HOST_FILE ] && . $HOST_FILE
   . /var/tmp/df-current.sh
   . ~/.config/df/aliases.sh
   . ~/.config/df/editor.sh
