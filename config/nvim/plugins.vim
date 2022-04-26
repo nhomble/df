@@ -213,5 +213,5 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 noremap <C-t> <Plug>(coc-definition)
 noremap <C-]> <C-o>
 
-let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-cmake', 'coc-lists', 'coc-rls', 'coc-tsserver']
+let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-cmake', 'coc-lists', 'coc-rls', 'coc-tsserver', 'coc-marketplace', 'coc-vimlsp', 'coc-tslint-plugin', 'coc-go', 'coc-lua']
 
