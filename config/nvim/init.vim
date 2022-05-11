@@ -16,6 +16,10 @@ set wildmenu            " adds menu style tab completion
 " ---------------------------------------
 set autoindent              " indents a new line with the same as the line just
                             " typed
+setlocal shiftwidth=2
+setlocal tabstop=2
+setlocal softtabstop=2
+setlocal expandtab
 filetype on 
 filetype indent on 
 filetype plugin indent on   " auto-indenting depending on file type
