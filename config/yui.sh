@@ -5,6 +5,7 @@ export LIBGL=ALWAYS_INDIRECT=1
 . ~/.config/df/terraform.sh
 . ~/.config/df/cargo.sh
 
+export EDITOR="nvim"
 alias term='st'
 alias python='python3'
 
@@ -42,3 +43,5 @@ function godoc(){
 
 export PATH="$HOME/.basher/bin:$PATH"   ##basher5ea843
 eval "$(basher init - bash)"             ##basher5ea843
+
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
