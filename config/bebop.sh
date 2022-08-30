@@ -3,6 +3,9 @@
 . ~/.config/df/cargo.sh
 alias python='python3'
 
+source /Users/nicolas/.local/share/notion-secretary/env
+alias tk="~/dev/notion-secretary/bin/add-task"
+
 export EDITOR="nvim"
 export PATH="$HOME/.basher/bin:$PATH"   ##basher5ea843
 eval "$(basher init - zsh)"             ##basher5ea843
