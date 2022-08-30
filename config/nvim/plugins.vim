@@ -17,6 +17,7 @@ call plug#begin()
   
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
+  Plug 'vim-test/vim-test'
 call plug#end()
 
 " ------------------------------------
