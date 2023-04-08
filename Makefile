@@ -2,7 +2,16 @@ MKFILE_WORDS  := $(words $(MAKEFILE_LIST))
 MKFILE_PATH 	:= $(abspath $(lastword $(MAKEFILE_LIST)))
 MKFILE_DIR 	 	:= $(dir $(MKFILE_PATH))
 
-all: home/directories nvim/config nvim/config/ftplugin home/dotfiles home/dotfiles/config nvim/plugins/install
+all: home/directories home/dotfiles home/dotfiles/config nvim/astrovim
+
+nvim/astrovim:
+	git submodule update --init;    \
+	nvim_dir="$$HOME/.config/nvim"; \
+	rm -rf "$$nvim_dir"; \
+	ln -s $(MKFILE_DIR)external/AstroNvim $$nvim_dir;  \
+	rm -rf "$(MKFILE_DIR)external/AstroNvim/lua/user"; \
+	ln -s $(MKFILE_DIR)config/astrovim "$(MKFILE_DIR)external/AstroNvim/lua/user"; \
+	nvim --headless -c 'quitall';
 
 home/directories:
 	mkdir -p $$HOME/dev
@@ -18,30 +27,12 @@ home/dotfiles:
 		dest="$$HOME/$$home_name";				\
 		[ -e "$$dest" ] && echo "Cleaning $$dest";  		\
 		rm -f "$$dest" && ln -s "$$df" "$$dest"; 		\
-	done 																												
-
-nvim/config:
-	for f in $$(find "$(MKFILE_DIR)config/nvim" -type f -depth 1); do 	\
-		nvim_dir="$$HOME/.config/nvim"; 				\
-		mkdir -p $$nvim_dir;						\
-		dest="$$nvim_dir/$$(basename $$f)"; 				\
-		[ -e "$$dest" ] && echo "Cleaning $$dest";    			\
-		rm -f "$$dest" && ln -s "$$f" "$$dest"; 			\
 	done
-
-nvim/config/ftplugin:
-	for f in $$(find "$(MKFILE_DIR)config/nvim/ftplugin" -type f); do 	\
-		nvim_dir="$$HOME/.config/nvim/ftplugin";			\
-		mkdir -p $$nvim_dir;						\
-		dest="$$nvim_dir/$$(basename $$f)"; 				\
-		[ -e "$$dest" ] && echo "Cleaning $$dest";    			\
-		rm -f "$$dest" && ln -s "$$f" "$$dest"; 			\
-	done
-
-nvim/plugins/install:
-	nvim +'PlugInstall' +qa
 
 clean:
-	rm -if "$$HOME/.config/df"
+	rm -if "$$HOME/.config/df";  \
+	rm -if "$$HOME/.config/nvim"; \
+	rm -if "$$HOME/.config/astrovim/lua/user";
+
 
 .PHONY: all clean
