@@ -11,7 +11,7 @@ nvim/astrovim:
 	ln -s $(MKFILE_DIR)external/AstroNvim $$nvim_dir;  \
 	rm -rf "$(MKFILE_DIR)external/AstroNvim/lua/user"; \
 	ln -s $(MKFILE_DIR)config/astrovim "$(MKFILE_DIR)external/AstroNvim/lua/user"; \
-	nvim --headless -c 'quitall'; 
+	nvim --headless -c 'quitall';
 
 home/directories:
 	mkdir -p $$HOME/dev
@@ -27,7 +27,7 @@ home/dotfiles:
 		dest="$$HOME/$$home_name";				\
 		[ -e "$$dest" ] && echo "Cleaning $$dest";  		\
 		rm -f "$$dest" && ln -s "$$df" "$$dest"; 		\
-	done 																												
+	done
 
 clean:
 	rm -if "$$HOME/.config/df";  \
