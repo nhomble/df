@@ -6,15 +6,11 @@ return {
 			ensure_installed = {
 				"clangd",
 				"cssls",
-				"gopls",
 				"html",
-				"intelephense",
 				"marksman",
 				"jsonls",
 				"pyright",
 				"lua_ls",
-				"taplo",
-				"texlab",
 				"tsserver",
 				"yamlls",
 			},
@@ -42,8 +38,6 @@ return {
 		opts = {
 			ensure_installed = {
 				"bash",
-				"cppdbg",
-				"delve",
 				"js",
 				"php",
 				"python",
