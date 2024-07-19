@@ -15,3 +15,16 @@ alias dev='cd ~/dev'
 alias cdtmp='cd $(mktemp -d)'
 alias guit='git'
 alias giut='git'
+
+term_colors() {
+for COLOR in {0..255} 
+do
+    for STYLE in "38;5"
+    do 
+        TAG="\033[${STYLE};${COLOR}m"
+        STR="${STYLE};${COLOR}"
+        echo -ne "${TAG}${STR}${NONE}  "
+    done
+    echo
+done
+}
