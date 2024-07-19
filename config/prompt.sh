@@ -23,7 +23,7 @@ export PROMPT='%F{green}%m %. %%%f '
   zstyle ':vcs_info:*' formats ' %s(%F{cyan}%b%f)' # git(main)
 
   # {status}{root}{dir} %
-  export PROMPT='%(?.%F{green}✓%f .%F{red}⏺%f )%(!.%K{red}%F{yellow}root%k%f .)%F{green}%2~$vcs_info_msg_0_ %%%f '
-  export RPROMPT='%F{8}%m ⏱ %*%f'
+  export PROMPT='%(?.%F{green}✓ %m%f .%F{red}⏺ %m%f )%(!.%K{red}%F{yellow}root%k%f .)%F{38;5;209}%2~ %%%f '
+  export RPROMPT='$vcs_info_msg_0_ %F{8}⏱ %*%f'
 }
 
