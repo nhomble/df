@@ -10,6 +10,7 @@ function load_current() {
   [ -f $HOST_FILE ] && . $HOST_FILE
   . ~/.config/df/aliases.sh
   . ~/.config/df/editor.sh
+  . ~/.config/df/prompt.sh
 }
 
 load_current
