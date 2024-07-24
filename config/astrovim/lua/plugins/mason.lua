@@ -29,8 +29,10 @@ return {
     "jay-babu/mason-nvim-dap.nvim",
     -- overrides `require("mason-nvim-dap").setup(...)`
     opts = {
+      -- https://github.com/jay-babu/mason-nvim-dap.nvim/blob/main/lua/mason-nvim-dap/mappings/source.lua
       ensure_installed = {
         "python",
+        "node2",
         -- add more arguments for adding more debuggers
       },
     },
