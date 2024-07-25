@@ -11,6 +11,7 @@ return {
         "lua_ls",
         "jsonls",
         "tsserver",
+        "typos_lsp"
         -- add more arguments for adding more language servers
       },
     },
