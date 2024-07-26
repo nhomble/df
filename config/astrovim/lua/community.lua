@@ -12,6 +12,9 @@ return {
   { import = "astrocommunity.pack.terraform" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.yaml" },
+  { import = "astrocommunity.pack.json" },
+  { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.docker" },
+  { import = "astrocommunity.pack.helm" },
   { import = "astrocommunity.test.neotest" },
 }
