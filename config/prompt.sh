@@ -10,20 +10,30 @@ export PROMPT='%F{green}%m %. %%%f '
 }
 
 [ ! -z "$ZSH_VERSION" ] && {
-  # Autoload zsh's `add-zsh-hook` and `vcs_info` functions
-  # (-U autoload w/o substition, -z use zsh style)
-  autoload -Uz add-zsh-hook vcs_info
+  export ZSH="$HOME/.oh-my-zsh"
+  ZSH_THEME="agnoster"
 
-  # Set prompt substitution so we can use the vcs_info_message variable
+  # TODO move out of prompt when I have a good place
+  plugins=(
+    git
+    git-prompt
+    aws
+  )
+  source $ZSH/oh-my-zsh.sh
+  GREEN="%{$fg_bold[green]%}"
+  YELLOW="%{$fg_bold[yellow]%}"
+  CYAN="%{$fg_bold[cyan]%}"
+  RED="%{$fg_bold[red]%}"
+  RESET="%{$reset_color%}"
+  ZSH_THEME_GIT_PROMPT_PREFIX=" $CYAN"
+  ZSH_THEME_GIT_PROMPT_SUFFIX=""
+  ZSH_THEME_GIT_PROMPT_DIRTY=" $RED⦿"
+  ZSH_THEME_GIT_PROMPT_CLEAN=" $GREEN⦾"
+
+  ZSH_THEME_AWS_PROFILE_PREFIX="${YELLOW}aws("
+  ZSH_THEME_AWS_PROFILE_SUFFIX=")${RESET}"
   setopt prompt_subst
-
-  # Run the `vcs_info` hook to grab git info before displaying the prompt
-  add-zsh-hook precmd vcs_info
-
-  zstyle ':vcs_info:*' formats ' %s(%F{cyan}%b%f)' # git(main)
-
-  # {status}{root}{dir} %
   export PROMPT='%(?.%F{green}✓ %m%f .%F{red}⏺ %m%f )%(!.%K{red}%F{yellow}root%k%f .)%F{38;5;209}%2~ %%%f '
-  export RPROMPT='$vcs_info_msg_0_ %F{8}⏱ %*%f'
+  export RPROMPT='$(git_prompt_info) $(aws_prompt_info)%F{8} %* ⏱%f'
 }
 

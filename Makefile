@@ -4,6 +4,9 @@ MKFILE_DIR 	 	:= $(dir $(MKFILE_PATH))
 
 all: home/directories home/dotfiles home/dotfiles/config nvim/astrovim
 
+zsh/install:
+	sh -c "$$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)";
+
 nvim/astrovim:
 	git submodule update --init;    \
 	nvim_dir="$$HOME/.config/nvim"; \
