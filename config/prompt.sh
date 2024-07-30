@@ -22,6 +22,7 @@ export PROMPT='%F{green}%m %. %%%f '
   source $ZSH/oh-my-zsh.sh
   GREEN="%{$fg_bold[green]%}"
   YELLOW="%{$fg_bold[yellow]%}"
+  AWS_YELLOW="%{$FG[208]%}"
   CYAN="%{$fg_bold[cyan]%}"
   RED="%{$fg_bold[red]%}"
   RESET="%{$reset_color%}"
@@ -30,7 +31,7 @@ export PROMPT='%F{green}%m %. %%%f '
   ZSH_THEME_GIT_PROMPT_DIRTY=" $RED⦿"
   ZSH_THEME_GIT_PROMPT_CLEAN=" $GREEN⦾"
 
-  ZSH_THEME_AWS_PROFILE_PREFIX="${YELLOW}aws("
+  ZSH_THEME_AWS_PROFILE_PREFIX="${AWS_YELLOW}aws("
   ZSH_THEME_AWS_PROFILE_SUFFIX=")${RESET}"
   setopt prompt_subst
   export PROMPT='%(?.%F{green}✓ %m%f .%F{red}⏺ %m%f )%(!.%K{red}%F{yellow}root%k%f .)%F{38;5;209}%2~ %%%f '
