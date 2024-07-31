@@ -18,4 +18,5 @@ return {
   { import = "astrocommunity.pack.helm" },
   { import = "astrocommunity.test.neotest" },
   { import = "astrocommunity.workflow.hardtime-nvim" },
+  { import = "astrocommunity.git.gitlinker-nvim" },
 }
