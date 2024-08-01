@@ -15,7 +15,6 @@ export PROMPT='%F{green}%m %. %%%f '
 
   # TODO move out of prompt when I have a good place
   plugins=(
-    git
     git-prompt
     aws
   )
