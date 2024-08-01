@@ -12,7 +12,8 @@ export PROMPT='%F{green}%m %. %%%f '
 [ ! -z "$ZSH_VERSION" ] && {
   export ZSH="$HOME/.oh-my-zsh"
   ZSH_THEME="agnoster"
-
+  # otherwise Desktop/ and dev/ are matched!
+  CASE_SENSITIVE="true"
   # TODO move out of prompt when I have a good place
   plugins=(
     git-prompt
