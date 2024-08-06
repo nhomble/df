@@ -4,6 +4,13 @@
 ---@type LazySpec
 return {
 	{
+		-- https://github.com/AstroNvim/astrocommunity/blob/main/lua/astrocommunity/pack/typescript/init.lua#L185
+		"nhomble/package-info.nvim",
+		dependencies = { "MunifTanjim/nui.nvim" },
+		opts = {},
+		event = "BufRead package.json",
+	},
+	{
 		"nvim-neotest/neotest",
 		dependencies = {
 			{ url = "https://github.com/nhomble/neotest-vitest", branch = "main" },
