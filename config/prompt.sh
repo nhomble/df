@@ -35,6 +35,6 @@ export PROMPT='%F{green}%m %. %%%f '
   ZSH_THEME_AWS_PROFILE_SUFFIX=")${RESET}"
   setopt prompt_subst
   export PROMPT='%(?.%F{green}✓ %m%f .%F{red}⏺ %m%f )%(!.%K{red}%F{yellow}root%k%f .)%F{38;5;209}%2~ %%%f '
-  export RPROMPT='$(git_prompt_info) $(aws_prompt_info)%F{8} %* ⏱%f'
+  export RPROMPT='${DF_JSDEBUG_ON:+(jsdebug) }$(git_prompt_info) $(aws_prompt_info)%F{8} %* ⏱%f'
 }
 
