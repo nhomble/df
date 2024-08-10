@@ -18,7 +18,7 @@ alias giut='git'
 
 function jsdebug_on() {
   export NODE_OPTIONS_OLD="$NODE_OPTIONS"
-  export NODE_OPTIONS="$NODE_OPTIONS_OLD --inspect --inspect-wait"
+  export NODE_OPTIONS="$NODE_OPTIONS_OLD --inspect --inspect-brk"
   export DF_JSDEBUG_ON=true
 }
 
