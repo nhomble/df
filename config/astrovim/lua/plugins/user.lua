@@ -4,6 +4,33 @@
 ---@type LazySpec
 return {
 	{
+		"nhomble/thought-flow.nvim"
+	},
+	{
+		"jbyuki/one-small-step-for-vimkind",
+		dependencies = {
+			"mfussenegger/nvim-dap",
+		},
+	},
+	{
+
+		"mfussenegger/nvim-dap",
+		config = function()
+			local dap = require("dap")
+			dap.configurations.lua = {
+				{
+					type = "nlua",
+					request = "attach",
+					name = "Attach to running Neovim instance",
+				},
+			}
+
+			dap.adapters.nlua = function(callback, config)
+				callback({ type = "server", host = config.host or "127.0.0.1", port = config.port or 8086 })
+			end
+		end,
+	},
+	{
 		-- https://github.com/AstroNvim/astrocommunity/blob/main/lua/astrocommunity/pack/typescript/init.lua#L185
 		"nhomble/package-info.nvim",
 		dependencies = { "MunifTanjim/nui.nvim" },
@@ -87,18 +114,18 @@ return {
 			npairs.add_rules(
 				{
 					Rule("$", "$", { "tex", "latex" })
-					-- don't add a pair if the next character is %
-							:with_pair(cond.not_after_regex("%%"))
-					-- don't add a pair if  the previous character is xxx
-							:with_pair(
-								cond.not_before_regex("xxx", 3)
-							)
-					-- don't move right when repeat character
-							:with_move(cond.none())
-					-- don't delete if the next character is xx
-							:with_del(cond.not_after_regex("xx"))
-					-- disable adding a newline when you press <cr>
-							:with_cr(cond.none()),
+						-- don't add a pair if the next character is %
+						:with_pair(cond.not_after_regex("%%"))
+						-- don't add a pair if  the previous character is xxx
+						:with_pair(
+							cond.not_before_regex("xxx", 3)
+						)
+						-- don't move right when repeat character
+						:with_move(cond.none())
+						-- don't delete if the next character is xx
+						:with_del(cond.not_after_regex("xx"))
+						-- disable adding a newline when you press <cr>
+						:with_cr(cond.none()),
 				},
 				-- disable for .vim files, but it work for another filetypes
 				Rule("a", "a", "-vim")

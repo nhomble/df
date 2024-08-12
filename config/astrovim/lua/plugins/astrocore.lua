@@ -68,6 +68,42 @@ return {
 					desc = "Close buffer from tabline",
 				},
 
+				-- start nvim lua debugger server
+				-- https://github.com/jbyuki/one-small-step-for-vimkind/blob/main/doc/osv.txt#L60
+				["<Leader>dNs"] = {
+					function()
+						require("osv").launch({port=8086})
+					end,
+					desc = "Start nvim-lua debug server"
+				},
+				["<Leader>dNq"] = {
+					function()
+						require("osv").stop()
+					end,
+					desc = "Quit nvim-lua debug server"
+				},
+				["<Leader>dNr"] = {
+					function()
+						require("osv").run_this()
+					end,
+				},
+				-- thought flow
+				["<Leader>j"] = {
+					desc = "thoughts"
+				},
+				["<Leader>jc"] = {
+					function()
+						require("thought-flow").capture()
+					end,
+					desc = "capture thought"
+				},
+				["<Leader>jv"] = {
+					function()
+						require("thought-flow").review()
+					end,
+					desc = "review thoughts"
+				}
+
 				-- tables with just a `desc` key will be registered with which-key if it's installed
 				-- this is useful for naming menus
 				-- ["<Leader>b"] = { desc = "Buffers" },
