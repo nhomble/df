@@ -4,7 +4,14 @@
 ---@type LazySpec
 return {
 	{
-		"nhomble/thought-flow.nvim"
+		"nhomble/thought-flow.nvim",
+		opts = {
+			notifications = {
+				error = function(msg)
+					require("notify")(msg, "error")
+				end,
+			},
+		},
 	},
 	{
 		"jbyuki/one-small-step-for-vimkind",
