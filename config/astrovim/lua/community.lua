@@ -19,5 +19,6 @@ return {
   { import = "astrocommunity.test.neotest" },
   { import = "astrocommunity.workflow.hardtime-nvim" },
   { import = "astrocommunity.git.gitlinker-nvim" },
-  { import = "astrocommunity.neovim-lua-development.lazydev-nvim"}
+  { import = "astrocommunity.neovim-lua-development.lazydev-nvim"},
+  { import = "astrocommunity.completion.copilot-lua-cmp" }
 }
