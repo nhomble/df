@@ -103,11 +103,17 @@ return {
 					end,
 					desc = "review thoughts"
 				},
+				["<Leader>jd"] = {
+					function()
+						require("thought-flow").remove_line()
+					end,
+					desc = "clear thought"
+				},
 				["<Leader>jD"] = {
 					function()
 						require("thought-flow").clear()
 					end,
-					desc = "clear thoughts"
+					desc = "clear all thoughts"
 				}
 
 				-- tables with just a `desc` key will be registered with which-key if it's installed
