@@ -10,7 +10,7 @@ return {
       ensure_installed = {
         "lua_ls",
         "jsonls",
-        "tsserver",
+        "ts_ls",
         "typos_lsp"
         -- add more arguments for adding more language servers
       },
