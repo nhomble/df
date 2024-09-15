@@ -17,3 +17,4 @@ export PATH="/Users/nicolas/Library/Python/3.8/bin:$PATH"
 source $HOMEBREW_PREFIX/opt/chruby/share/chruby/chruby.sh
 chruby ruby-3.1.2
 eval "$(/Users/nicolas/.local/bin/mise activate zsh)"
+export PATH="/Users/nicolas/.moon/bin:$PATH"
