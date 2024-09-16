@@ -35,6 +35,7 @@ return {
       ensure_installed = {
         "python",
         "node2",
+        -- "js-debug-adapter",
         -- add more arguments for adding more debuggers
       },
     },
