@@ -17,6 +17,7 @@ return {
   { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.helm" },
   { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.test.neotest" },
   { import = "astrocommunity.workflow.hardtime-nvim" },
   { import = "astrocommunity.git.gitlinker-nvim" },
