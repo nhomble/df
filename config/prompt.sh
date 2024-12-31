@@ -18,6 +18,7 @@ export PROMPT='%F{green}%m %. %%%f '
   plugins=(
     git-prompt
     aws
+    direnv
   )
   source $ZSH/oh-my-zsh.sh
   GREEN="%{$fg_bold[green]%}"
