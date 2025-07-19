@@ -40,9 +40,11 @@ return {
 		"mxsdev/nvim-dap-vscode-js",
 		dependencies = {
 			"mfussenegger/nvim-dap",
-      'microsoft/vscode-js-debug',
-      version = '1.x',
-      build = 'npm i && npm run compile vsDebugServerBundle && mv dist out',
+			{
+				'microsoft/vscode-js-debug',
+				version = '1.x',
+				build = 'npm i && npm run compile vsDebugServerBundle && mv dist out',
+			},
 		},
 		config = function()
 			require("dap-vscode-js").setup({
@@ -130,23 +132,29 @@ return {
 
 	-- == Examples of Overriding Plugins ==
 
-	-- customize alpha options
+	-- customize dashboard with snacks.nvim (replaces alpha-nvim in v5)
 	{
-		"goolord/alpha-nvim",
-		opts = function(_, opts)
-			-- customize the dashboard header
-			opts.section.header.val = {
-				"                                                     ",
-				"  ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ",
-				"  ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║ ",
-				"  ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║ ",
-				"  ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║ ",
-				"  ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ ",
-				"  ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ ",
-				"                                                     ",
-			}
-			return opts
-		end,
+		"folke/snacks.nvim",
+		opts = {
+			dashboard = {
+				sections = {
+					{ section = "header" },
+					{ section = "keys", gap = 1, padding = 1 },
+					{ section = "startup" },
+				},
+				preset = {
+					header = [[
+                                                     
+  ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ 
+  ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║ 
+  ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║ 
+  ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║ 
+  ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ 
+  ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ 
+                                                     ]],
+				},
+			},
+		},
 	},
 
 	-- You can disable default plugins as follows:
