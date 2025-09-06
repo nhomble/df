@@ -27,7 +27,6 @@ export PROMPT='%F{green}%m %. %%%f '
   CASE_SENSITIVE="true"
   # TODO move out of prompt when I have a good place
   plugins=(
-    aws
     direnv
   )
   source $ZSH/oh-my-zsh.sh
@@ -38,10 +37,12 @@ export PROMPT='%F{green}%m %. %%%f '
   RED="%{$fg_bold[red]%}"
   RESET="%{$reset_color%}"
 
-  ZSH_THEME_AWS_PROFILE_PREFIX="${AWS_YELLOW}aws("
-  ZSH_THEME_AWS_PROFILE_SUFFIX=")${RESET}"
+  _aws_info() {
+    [ -n "$AWS_PROFILE" ] && echo " %{$FG[208]%}($AWS_PROFILE)%{$reset_color%}"
+  }
+
   setopt prompt_subst
   export PROMPT='%(?.%F{green}✓ %m%f .%F{red}⏺ %m%f )%(!.%K{red}%F{yellow}root%k%f .)%F{38;5;209}%2~ %%%f '
-  export RPROMPT='${DF_JSDEBUG_ON:+𖢥 }$(_git_info) $(aws_prompt_info)%F{8} %* ⏱%f'
+  export RPROMPT='${DF_JSDEBUG_ON:+𖢥 }$(_git_info)$(_aws_info)%F{8} %* ⏱%f'
 }
 
