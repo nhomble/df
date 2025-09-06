@@ -2,9 +2,9 @@
 
 _git_info() {
   branch=$(git branch --show-current 2>/dev/null)
-  [ -n "$branch" ] && echo " $branch" && return
+  [ -n "$branch" ] && echo "%F{yellow} $branch%f" && return
   sha=$(git rev-parse --short HEAD 2>/dev/null)
-  [ -n "$sha" ] && echo " $sha" && return
+  [ -n "$sha" ] && echo "%F{yellow} $sha%f" && return
   echo ""
 }
 
