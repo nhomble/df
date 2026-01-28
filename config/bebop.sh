@@ -18,3 +18,16 @@ source $HOMEBREW_PREFIX/opt/chruby/share/chruby/chruby.sh
 chruby ruby-3.1.2
 eval "$(/Users/nicolas/.local/bin/mise activate zsh)"
 export PATH="/Users/nicolas/.moon/bin:$PATH"
+
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/nicolas/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
+
+# tmux status bar
+tmux_status_right() {
+  cpu=$(top -l 1 -n 0 -s 0 | grep 'CPU usage' | awk '{print $3}')
+  mem=$(memory_pressure | awk '/free percentage/{print 100-$5}')
+  echo "CPU: $cpu | Mem: ${mem}%"
+}
