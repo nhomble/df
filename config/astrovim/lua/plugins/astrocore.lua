@@ -93,27 +93,19 @@ return {
 					desc = "thoughts"
 				},
 				["<Leader>jc"] = {
-					function()
-						require("thought-flow").capture()
-					end,
+					"<cmd>ThoughtFlowCapture<CR>",
 					desc = "capture thought"
 				},
 				["<Leader>jv"] = {
-					function()
-						require("thought-flow").review()
-					end,
+					"<cmd>ThoughtFlowReview<CR>",
 					desc = "review thoughts"
 				},
 				["<Leader>jd"] = {
-					function()
-						require("thought-flow").remove_line()
-					end,
+					"<cmd>ThoughtFlowRemoveLine<CR>",
 					desc = "clear thought"
 				},
 				["<Leader>jD"] = {
-					function()
-						require("thought-flow").clear()
-					end,
+					"<cmd>ThoughtFlowClear<CR>",
 					desc = "clear all thoughts"
 				}
 

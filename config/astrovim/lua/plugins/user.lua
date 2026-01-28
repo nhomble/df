@@ -1,5 +1,5 @@
 -- You can also add or configure plugins by creating files in this `plugins/` folder
--- Here are some examples:
+-- Override with local paths in user.local.lua (gitignored)
 
 ---@type LazySpec
 return {
@@ -22,13 +22,16 @@ return {
 	},
 	{
 		"nhomble/thought-flow.nvim",
-		opts = {
-			notifications = {
-				error = function(msg)
-					require("notify")(msg, "error")
-				end,
-			},
-		},
+		dependencies = { "MunifTanjim/nui.nvim" },
+		config = function()
+			require("thought-flow").setup({
+				notifications = {
+					error = function(msg)
+						require("notify")(msg, "error")
+					end,
+				},
+			})
+		end,
 	},
 	{
 		"jbyuki/one-small-step-for-vimkind",
