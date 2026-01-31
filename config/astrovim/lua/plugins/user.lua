@@ -5,6 +5,17 @@
 return {
 	{
 		"nhomble/moon-monorepo.nvim",
+		config = function()
+			require("neo-tree.sources.moon-monorepo").setup({
+				icons = {
+					tags_header = "",
+					projects_header = "",
+					task = "",
+					folder_open = "",
+					folder_closed = "",
+				},
+			})
+		end,
 		dependencies = {
 			"nvim-neo-tree/neo-tree.nvim",
 			opts = function(_, opts)
