@@ -40,6 +40,12 @@ scrollback-limit = 10000
 keybind = ctrl+b>shift+five=new_split:right
 keybind = ctrl+b>shift+quote=new_split:down
 
+# Navigate splits (direct)
+keybind = ctrl+h=goto_split:left
+keybind = ctrl+j=goto_split:bottom
+keybind = ctrl+k=goto_split:top
+keybind = ctrl+l=goto_split:right
+
 # Navigate splits (tmux: prefix + arrow)
 keybind = ctrl+b>left=goto_split:left
 keybind = ctrl+b>right=goto_split:right
