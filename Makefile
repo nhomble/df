@@ -2,7 +2,7 @@ MKFILE_WORDS  := $(words $(MAKEFILE_LIST))
 MKFILE_PATH 	:= $(abspath $(lastword $(MAKEFILE_LIST)))
 MKFILE_DIR 	 	:= $(dir $(MKFILE_PATH))
 
-all: home/directories home/dotfiles home/dotfiles/config nvim/astrovim tmux/setup
+all: home/directories home/dotfiles home/dotfiles/config nvim/astrovim tmux/setup ghostty/setup
 
 zsh/install:
 	sh -c "$$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)";
@@ -20,6 +20,12 @@ tmux/setup:
 	mkdir -p "$$tmux_dir";           \
 	rm -rf "$$tmux_dir/tpm";         \
 	ln -s $(MKFILE_DIR)external/tpm "$$tmux_dir/tpm"
+
+ghostty/setup:
+	ghostty_dir="$$HOME/.config/ghostty"; \
+	mkdir -p "$$(dirname "$$ghostty_dir")"; \
+	rm -rf "$$ghostty_dir"; \
+	ln -s $(MKFILE_DIR)config/ghostty "$$ghostty_dir"
 
 home/directories:
 	mkdir -p $$HOME/dev
@@ -44,6 +50,7 @@ clean:
 	rm -rf "$$HOME/.local/share/nvim"; \
 	rm -rf "$$HOME/.local/state/nvim"; \
 	rm -rf "$$HOME/.cache/nvim"; \
-	rm -rf "$$HOME/.tmux/plugins/tpm";
+	rm -rf "$$HOME/.tmux/plugins/tpm"; \
+	rm -rf "$$HOME/.config/ghostty";
 
 .PHONY: all clean
