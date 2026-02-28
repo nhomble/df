@@ -87,6 +87,9 @@ keybind = ctrl+b>seven=goto_tab:7
 keybind = ctrl+b>eight=goto_tab:8
 keybind = ctrl+b>nine=goto_tab:9
 
+# Rename tab/surface (tmux: prefix + ,)
+keybind = ctrl+b>comma=prompt_surface_title
+
 # Move tabs
 keybind = ctrl+b>shift+n=move_tab:1
 keybind = ctrl+b>shift+p=move_tab:-1
